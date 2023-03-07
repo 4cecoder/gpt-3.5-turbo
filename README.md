@@ -25,17 +25,28 @@ python chatgpt.py
 ```
 
 If there is an error connecting, it can be resolved by adding a proxy. You can add the following code:
-> ``` Python    
+
+```py    
 import os
+
 os.environ["http_proxy"] = "http://127.0.0.1:10809"  # Replace with the appropriate port for your proxy (e.g., 7890 for Clash)
+
 os.environ["https_proxy"] = "http://127.0.0.1:10809"  # Replace with the appropriate port for your proxy (e.g., 7890 for Clash)
-> ```
+```
+
 This code block sets the proxy environment variables to the appropriate port for your proxy, allowing the program to connect properly.
 
 
 ## How to train GPT 3.5 Turbo
-The GPT 3.5 Turbo model has a role ('system', 'user', 'assistant') and content (i.e., the message's content) for each message. According to the OpenAI website, system messages help to configure the behavior of the assistant. Therefore, we can set the GPT 3.5 Turbo as a cat girl by using these role attributes.Next, following this method, I found a trained chatbot on GitHub for setting up. An example is shown below:
-(The text for this example comes from [chatGPT](https://github.com/2249899756/chatGPT)). I believe that the effect can be improved by setting up multiple roles, and you can also set up any character you want the chatbot to imitate.
+
+The GPT 3.5 Turbo model has a role ('system', 'user', 'assistant') and content (i.e., the message's content) for each message. According to the OpenAI website, system messages help to configure the behavior of the assistant.
+
+Therefore, we can set the GPT 3.5 Turbo as a cat girl by using these role attributes.Next, following this method, I found a trained chatbot on GitHub for setting up. 
+
+An example is shown below:
+(The text for this example comes from [chatGPT](https://github.com/2249899756/chatGPT)). 
+
+I believe that the effect can be improved by setting up multiple roles, and you can also set up any character you want the chatbot to imitate.
 
 ```Python
          self.messages = [
