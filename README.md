@@ -1,21 +1,26 @@
 # gpt-3.5-turbo
+
 chat with gpt-3.5-turbo。
+
 ## Update
-Add a function to count the tokens in messages. When the total number of tokens in the messages reaches 4096, it will no longer be possible to input. However, in order to maintain context, each input and output must be added to the messages, which will cause the number of tokens to increase over time. After 10 conversations, the limit may be reached, so it is necessary to clear some messages in order to continue the conversation. However, clearing the messages may affect the context, so this problem still needs to be solved.
+Added a function to count the tokens in messages. When the total number of tokens in the messages reaches 4096, it will no longer be possible to input. However, in order to maintain context, each input and output must be added to the messages, which will cause the number of tokens to increase over time. After 10 conversations, the limit may be reached, so it is necessary to clear some messages in order to continue the conversation. However, clearing the messages may affect the context, so this problem still needs to be solved.
 
 ## Usage
 1. First, you need to install Python.
 2. Install the OpenAI module (the version of OpenAI needs to be greater than V0.27.0).
+
 ```bash
 pip install openai
 ```
 3. Add your OpenAI API key in chatgpt.py (which can be found in [OpenAI](https://platform.openai.com/account/api-keys)'s account center).
-``` Python  
+
+```py  
 openai.api_key="Your api_key"
 ```
 
 4. Run the chatgpt.py file.
-``` bash
+
+```bash
 python chatgpt.py
 ```
 
@@ -41,6 +46,7 @@ The GPT 3.5 Turbo model has a role ('system', 'user', 'assistant') and content (
 ```
 
 The output is as follows:
+
 ```
 Enter: Pat pat head
 Meow~ Meow-chan will let you pat her head~~~ Meow~
